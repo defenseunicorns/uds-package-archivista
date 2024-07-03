@@ -1,0 +1,18 @@
+variables:
+  dev-minio:
+    buckets: |
+      - name: uds-archivista-dev
+  postgres-operator:
+    postgresql:
+      enabled: true  # Set to false to not create the PostgreSQL resource
+      teamId: "uds"
+      volume:
+        size: "10Gi"
+      numberOfInstances: 2
+      users:
+        archivista.archivista: []  # database owner
+      databases:
+        archivista: archivista.archivista
+      version: "13"
+      ingress:
+        remoteGenerated: Anywhere

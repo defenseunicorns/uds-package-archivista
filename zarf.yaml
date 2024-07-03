@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/defenseunicorns/zarf/main/zarf.schema.json
+kind: ZarfPackageConfig
+metadata:
+  name: archivista
+  description: "UDS Archivista Package"
+  # x-release-please-start-version
+  version: "0.4.0-uds.0"
+  # x-release-please-end
+
+variables:
+  - name: SUBDOMAIN
+    description: "Subdomain for Archivista"
+    default: "archivista"
+  - name: DOMAIN
+    default: "uds.dev"
+  - name: ACCESS_KEY
+    description: "Access Key for S3 compatible storage"
+  - name: SECRET_KEY
+    description: "Secret Key for S3 compatible storage"
+  - name: DB_PASSWORD
+    description: "Database Password for Archivista"
+
+components:
+  - name: archivista
+    required: true
+    description: "Deploy Archivista"
+    import:
+      path: common
+    only:
+      flavor: upstream
+    charts:
+      - name: archivista
+        valuesFiles:
+          - values/upstream-values.yaml
+    images:
+      - ghcr.io/in-toto/archivista:0.4.0
