@@ -18,9 +18,9 @@ components:
         namespace: archivista
         url: https://github.com/in-toto/archivista.git
         gitPath: chart
-        # using this git sha for now until a new version of archivista is released
-        # upstream helm chart has changes that are in main but not yet release
-        version: ea313cdefbf930a62bf0e930d91f4af68efd3ff5 
+        # using this git sha for now until a new version of archivista is available
+        # upstream has helm chart changes that are in main but not yet released
+        version: ea313cdefbf930a62bf0e930d91f4af68efd3ff5
         valuesFiles:
           - ../values/common-values.yaml
     actions:
