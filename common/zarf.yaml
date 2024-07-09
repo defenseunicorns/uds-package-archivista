@@ -8,16 +8,17 @@ components:
   - name: archivista
     required: true
     charts:
-      # - name: uds-archivista-config
-      #   namespace: archivista
-      #   version: 0.1.0
-      #   localPath: ../chart
-      #   valuesFiles:
-      #     - ../values/config-values.yaml
+      - name: uds-archivista-config
+        namespace: archivista
+        version: 0.1.0
+        localPath: ../chart
+        valuesFiles:
+          - ../values/config-values.yaml
       - name: archivista
         namespace: archivista
-        url: https://github.com/in-toto/archivista.git
-        gitPath: chart
+#        url: https://github.com/in-toto/archivista.git
+#        gitPath: chart
+        localPath: ../../archivista/chart
         version: v0.5.1
         valuesFiles:
           - ../values/common-values.yaml

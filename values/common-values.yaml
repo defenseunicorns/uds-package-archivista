@@ -4,3 +4,12 @@ image:
 
 ingress:
   enabled: false
+
+deployment:
+  envFrom:
+    # Database Configuration
+    - secretRef:
+        name: archivista-postgres
+    # Object Store Configuration
+    - secretRef:
+        name: archivista-object-store
