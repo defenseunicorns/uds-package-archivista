@@ -8,8 +8,33 @@ This package is designed for use as part of a [UDS Software Factory](https://git
 
 ## Prerequisites
 
-TODO: Write this correctly for Archivista
-Archivista requires ___ dependencies, postgres and s3 compatible object storage. Wiring Archivista to your dependencies is done primarily via helm values, which will require the use of a bundle created with uds-cli.
+Archivista requires 2 dependencies, postgres and s3 compatible object storage. Wiring Archivista to your dependencies is done primarily via helm values, which will require the use of a bundle created with uds-cli.
+
+### Postgres
+
+Postgres configuration is setup in the `uds-archivista-config` chart and should be done via bundle overrides (variables or values) like the below:
+```yaml
+    overrides:
+      archivista:
+        uds-archivista-config:
+          values:
+            - path: "postgres.host"
+              value: "postgresql.dev-postgres.svc.cluster.local"
+```
+### S3 Compatible Object Storage
+
+Object storage configuration is setup in the `uds-archivista-config` chart and should be done via bundle overrides (variables or values) like the below:
+```yaml
+    overrides:
+      archivista:
+        uds-archivista-config:
+          values:
+            - path: "objectStorage.endpoint"
+              value: "minio.dev-minio.svc.cluster.local:9000"
+```
+
+The full list of override config can be found in the values under `objectStorage` [here](./chart/values.yaml). In addition zarf vars are exposed for `ACCESS_KEY` and `SECRET_KEY` for convenience if using import/exports in your bundle.
+
 
 ## Flavors
 
