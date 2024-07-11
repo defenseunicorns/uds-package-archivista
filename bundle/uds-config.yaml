@@ -13,6 +13,6 @@ variables:
         archivista.archivista: []  # database owner
       databases:
         archivista: archivista.archivista
-      version: "13"
+      version: "14"
       ingress:
         remoteGenerated: Anywhere
