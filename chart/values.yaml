@@ -27,13 +27,6 @@ postgres:
   namespace: postgres
   port: 5432
 
-# Additional configuration for Archivista
-config:
-  enablePluginUploads: false
-
-# Additional environment variables for Archivista
-extraEnv: {}
-
 storage:
   # Set to false to use external storage
   internal: true

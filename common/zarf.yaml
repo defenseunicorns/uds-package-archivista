@@ -34,3 +34,11 @@ components:
                 name: archivista
                 namespace: archivista
                 condition: "'{.status.phase}'=Ready"
+          - description: Archivista to be Healthy
+            maxTotalSeconds: 90
+            wait:
+              cluster:
+                kind: pod
+                name: app.kubernetes.io/name=archivista
+                namespace: archivista
+                condition: Ready

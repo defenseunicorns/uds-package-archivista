@@ -4,5 +4,3 @@ objectStorage:
 
 postgres:
   password: "###ZARF_VAR_DB_PASSWORD###"
-
-subdomain: "###ZARF_VAR_SUBDOMAIN###"
