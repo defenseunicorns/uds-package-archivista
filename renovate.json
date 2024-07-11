@@ -28,8 +28,7 @@
       "labels": ["package-deps"],
       "commitMessageTopic": "package-deps",
       "matchDatasources": ["docker"],
-      "matchPackagePatterns": ["archivista"],
-      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+$/"
+      "matchPackagePatterns": ["archivista"]
     }
   ]
 }
