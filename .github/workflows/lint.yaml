@@ -32,4 +32,4 @@ jobs:
 
       - name: Lint the repository
         run: |
-          uds run lint:yaml
+          uds run lint:yaml --no-progress
