@@ -8,17 +8,10 @@ metadata:
   # x-release-please-end
 
 variables:
-  - name: SUBDOMAIN
-    description: "Subdomain for Archivista"
-    default: "archivista"
-  - name: DOMAIN
-    default: "uds.dev"
   - name: ACCESS_KEY
     description: "Access Key for S3 compatible storage"
   - name: SECRET_KEY
     description: "Secret Key for S3 compatible storage"
-  - name: DB_PASSWORD
-    description: "Database Password for Archivista"
 
 components:
   - name: archivista
