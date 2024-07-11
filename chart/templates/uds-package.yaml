@@ -10,7 +10,7 @@ spec:
         selector:
           app.kubernetes.io/name: archivista
         gateway: tenant
-        host: {{ .Values.subdomain }}
+        host: archivista
         port: 8082
     allow:
       # Permit intra-namespace communication for job communications

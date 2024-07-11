@@ -27,9 +27,6 @@ postgres:
   namespace: postgres
   port: 5432
 
-# The subdomain for the archivista server, will be prefixed to your domain (ex: archivista.example.com)
-subdomain: "archivista"
-
 # Additional configuration for Archivista
 config:
   enablePluginUploads: false
