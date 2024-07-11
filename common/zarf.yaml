@@ -35,7 +35,7 @@ components:
                 namespace: archivista
                 condition: "'{.status.phase}'=Ready"
           - description: Archivista to be Healthy
-            maxTotalSeconds: 90
+            maxTotalSeconds: 150
             wait:
               cluster:
                 kind: pod

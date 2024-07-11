@@ -1,12 +1,9 @@
-domain: "###ZARF_VAR_DOMAIN###"
-
 objectStorage:
   secure: true
   accessKey: ""
   secretKey: ""
   bucket: "archivista"
   endpoint: "s3.amazonaws.com"
-  region: "us-west-1"
 
 postgres:
   username: "archivista.archivista"
