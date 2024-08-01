@@ -20,7 +20,7 @@ components:
         gitPath: chart
         # using this git sha for now until a new version of archivista is tagged.
         # upstream has helm chart changes that are in main but not yet released
-        version: ea313cdefbf930a62bf0e930d91f4af68efd3ff5
+        version: 3b8f3e858a61dfa865169168df167a1831512368
         valuesFiles:
           - ../values/common-values.yaml
     actions:

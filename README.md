@@ -19,7 +19,7 @@ Postgres configuration is setup in the `uds-archivista-config` chart and should 
         uds-archivista-config:
           values:
             - path: "postgres.host"
-              value: "postgresql.dev-postgres.svc.cluster.local"
+              value: "pg-cluster.postgres.svc.cluster.local"
 ```
 ### S3 Compatible Object Storage
 
