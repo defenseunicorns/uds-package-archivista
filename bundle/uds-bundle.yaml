@@ -21,10 +21,21 @@ packages:
     overrides:
       postgres-operator:
         uds-postgres-config:
-          variables:
-            - name: POSTGRESQL
-              description: "Configure postgres using CRs via the uds-postgres-config chart"
-              path: postgresql
+          values:
+            - path: postgresql
+              value:
+                enabled: true  # Set to false to not create the PostgreSQL resource
+                teamId: "uds"
+                volume:
+                  size: "10Gi"
+                numberOfInstances: 2
+                users:
+                  archivista.archivista: []  # database owner
+                databases:
+                  archivista: archivista.archivista
+                version: "14"
+                ingress:
+                  remoteGenerated: Anywhere
 
   - name: dev-secrets
     path: ../
@@ -47,9 +58,9 @@ packages:
       archivista:
         uds-archivista-config:
           values:
-            - path: "objectStorage.secure"
+            - path: "storage.secure"
               value: "false"
-            - path: "objectStorage.endpoint"
+            - path: "storage.endpoint"
               value: "minio.dev-minio.svc.cluster.local:9000"
-            - path: "objectStorage.bucket"
+            - path: "storage.bucket"
               value: "uds-archivista-dev"

@@ -20,3 +20,5 @@ secret-sops-gpg.yaml
 # Tests
 node_modules/
 .playwright/
+downloaded_attestation.json
+response.json

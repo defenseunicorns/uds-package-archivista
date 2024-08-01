@@ -1,9 +1,16 @@
-objectStorage:
+storage:
   secure: true
   accessKey: ""
   secretKey: ""
   bucket: "archivista"
   endpoint: "s3.amazonaws.com"
+
+  # Set to false to use external storage
+  internal: true
+  selector:
+    app: minio
+  namespace: dev-minio
+  port: 9000
 
 postgres:
   username: "archivista.archivista"
@@ -23,11 +30,3 @@ postgres:
     cluster-name: pg-cluster
   namespace: postgres
   port: 5432
-
-storage:
-  # Set to false to use external storage
-  internal: true
-  selector:
-    app: minio
-  namespace: dev-minio
-  port: 9000

@@ -3,6 +3,7 @@ tasks:
     actions:
       - task: health-check
       - task: ingress
+      - task: api
 
   - name: health-check
     actions:
@@ -22,3 +23,9 @@ tasks:
             protocol: https
             address: archivista.uds.dev
             code: 200
+
+  - name: api
+    actions:
+      - description: Archivista API Tests
+      - cmd: bash test.bash
+        dir: tests

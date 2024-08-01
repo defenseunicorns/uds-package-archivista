@@ -29,11 +29,11 @@ Object storage configuration is setup in the `uds-archivista-config` chart and s
       archivista:
         uds-archivista-config:
           values:
-            - path: "objectStorage.endpoint"
+            - path: "storage.endpoint"
               value: "minio.dev-minio.svc.cluster.local:9000"
 ```
 
-The full list of override config can be found in the values under `objectStorage` [here](./chart/values.yaml). In addition zarf vars are exposed for `ACCESS_KEY` and `SECRET_KEY` for convenience if using import/exports in your bundle.
+The full list of override config can be found in the values under `storage` [here](./chart/values.yaml). In addition zarf vars are exposed for `ACCESS_KEY` and `SECRET_KEY` for convenience if using import/exports in your bundle.
 
 
 ## Flavors

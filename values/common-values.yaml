@@ -13,4 +13,3 @@ deployment:
     # Object Store Configuration
     - secretRef:
         name: archivista-object-store
-
