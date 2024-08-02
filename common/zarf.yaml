@@ -18,9 +18,10 @@ components:
         namespace: archivista
         url: https://github.com/in-toto/archivista.git
         gitPath: chart
-        # using this git sha for now until a new version of archivista is tagged.
-        # upstream has helm chart changes that are in main but not yet released
-        version: 3b8f3e858a61dfa865169168df167a1831512368
+        # todo ewyles- using chart version > than application version because app 
+        # version 0.5.2 has a db migration issue i'm working through. ideally will 
+        # bump everything to 0.5.3 shortly
+        version: v0.5.3
         valuesFiles:
           - ../values/common-values.yaml
     actions:
@@ -35,7 +36,7 @@ components:
                 namespace: archivista
                 condition: "'{.status.phase}'=Ready"
           - description: Archivista to be Healthy
-            maxTotalSeconds: 150
+            maxTotalSeconds: 180
             wait:
               cluster:
                 kind: pod

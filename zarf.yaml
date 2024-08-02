@@ -28,4 +28,5 @@ components:
         valuesFiles:
           - values/upstream-values.yaml
     images:
+      #todo ewyles - leaving this at 0.5.1 for the moment while I work out a db migration issue with >=0.5.2
       - ghcr.io/in-toto/archivista:0.5.1
