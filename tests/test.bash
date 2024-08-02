@@ -2,12 +2,12 @@ attestation_file=attestation.json
 downloaded_file=downloaded_attestation.json
 
 #upload an existing attestation to archivista
-response=$(curl --fail-with-body -o response.json -w \"%{http_code}\" -X POST https://archivista.uds.dev/upload -d @$attestation_file)
-http_status=$(echo "$response" | tail -n1 | sed 's/"//g')
+response=$(curl --fail-with-body -o response.json -X POST https://archivista.uds.dev/upload -d @$attestation_file)
+curl_rc=$?
 response_body=$(cat response.json)
 
 # Check if the post was successful
-if [ $http_status -eq 200 ]; then
+if [ $curl_rc -eq 0 ]; then
     # Extract the gitoid from the JSON response
     gitoid=$(echo "$response_body" | jq -r '.gitoid')
 
