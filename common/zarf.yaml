@@ -18,9 +18,6 @@ components:
         namespace: archivista
         url: https://github.com/in-toto/archivista.git
         gitPath: chart
-        # todo ewyles- using chart version > than application version because app
-        # version 0.5.2 has a db migration issue i'm working through. ideally will
-        # bump everything to 0.5.3 shortly
         version: v0.5.3
         valuesFiles:
           - ../values/common-values.yaml

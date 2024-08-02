@@ -15,4 +15,4 @@ variables:
         archivista: archivista.archivista
       version: "14"
       ingress:
-        remoteGenerated: Anywhere
+        - remoteGenerated: Anywhere

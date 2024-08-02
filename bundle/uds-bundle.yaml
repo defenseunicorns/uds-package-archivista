@@ -35,7 +35,7 @@ packages:
                   archivista: archivista.archivista
                 version: "14"
                 ingress:
-                  remoteGenerated: Anywhere
+                  - remoteGenerated: Anywhere
 
   - name: dev-secrets
     path: ../
@@ -64,3 +64,5 @@ packages:
               value: "minio.dev-minio.svc.cluster.local:9000"
             - path: "storage.bucket"
               value: "uds-archivista-dev"
+            - path: "postgres.connectionOptions"
+              value: "?search_path=archivista"
