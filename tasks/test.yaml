@@ -56,5 +56,5 @@ tasks:
               echo "Curl command failed or did not return a 200 status code."
               echo "Response: $response_body"
               exit 1
-          fi      
+          fi
         dir: tests
