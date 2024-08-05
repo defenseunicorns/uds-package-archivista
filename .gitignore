@@ -7,7 +7,5 @@ build/
 zarf-sbom
 
 # Tests
-node_modules/
-.playwright/
 downloaded_attestation.json
 response.json
