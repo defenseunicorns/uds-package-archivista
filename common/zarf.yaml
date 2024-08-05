@@ -12,8 +12,6 @@ components:
         namespace: archivista
         version: 0.1.0
         localPath: ../chart
-        valuesFiles:
-          - ../values/config-values.yaml
       - name: archivista
         namespace: archivista
         url: https://github.com/in-toto/archivista.git
