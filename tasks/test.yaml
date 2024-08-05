@@ -1,23 +1,12 @@
 tasks:
   - name: all
     actions:
-      - task: health-check
       - task: ingress
       - task: api
 
-  - name: health-check
-    actions:
-      - description: Archivista Health Check
-        wait:
-          cluster:
-            kind: Deployment
-            name: archivista
-            namespace: archivista
-            condition: Available
-
   - name: ingress
     actions:
-      - description: Archivista UI Health Check
+      - description: Archivista Ingress Health Check
         wait:
           network:
             protocol: https
