@@ -6,6 +6,11 @@
 
 This package is designed for use as part of a [UDS Software Factory](https://github.com/defenseunicorns/uds-software-factory) bundle deployed on [UDS Core](https://github.com/defenseunicorns/uds-core).
 
+## Prerequisites
+
+- Postgres database.
+- S3 Compatible object storage.
+
 ## Flavors
 
 | Flavor | Description | Example Creation |
