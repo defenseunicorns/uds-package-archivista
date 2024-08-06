@@ -4,7 +4,7 @@ metadata:
   name: archivista
   description: "A deployment of Archivista, an application for storing in-toto attestations."
   # x-release-please-start-version
-  version: "0.5.1-uds.0"
+  version: "0.5.3-uds.0"
   # x-release-please-end
 
 variables:
