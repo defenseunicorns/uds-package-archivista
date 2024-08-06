@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: archivista-object-store
+  namespace: {{ .Release.Namespace }}
+type: Opaque
+stringData:
+  ARCHIVISTA_STORAGE_BACKEND: "BLOB"
+  ARCHIVISTA_BLOB_STORE_ENDPOINT: "{{ .Values.storage.endpoint }}"
+  ARCHIVISTA_BLOB_STORE_ACCESS_KEY_ID: "{{ .Values.storage.accessKey }}"
+  ARCHIVISTA_BLOB_STORE_SECRET_ACCESS_KEY_ID: "{{ .Values.storage.secretKey }}"
+  ARCHIVISTA_BLOB_STORE_USE_TLS: "{{ .Values.storage.secure | toString }}"
+  ARCHIVISTA_BLOB_STORE_BUCKET_NAME: "{{ .Values.storage.bucket }}"       

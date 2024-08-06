@@ -1,0 +1,4 @@
+variables:
+  dev-minio:
+    buckets: |
+      - name: uds-archivista-dev

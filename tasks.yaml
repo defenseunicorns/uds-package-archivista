@@ -1,0 +1,57 @@
+includes:
+  - cleanup: ./tasks/cleanup.yaml
+  - dependencies: ./tasks/dependencies.yaml
+  - test: ./tasks/test.yaml
+  - create: https://raw.githubusercontent.com/defenseunicorns/uds-common/v0.6.0/tasks/create.yaml
+  - lint: https://raw.githubusercontent.com/defenseunicorns/uds-common/v0.6.0/tasks/lint.yaml
+  - pull: https://raw.githubusercontent.com/defenseunicorns/uds-common/v0.6.0/tasks/pull.yaml
+  - deploy: https://raw.githubusercontent.com/defenseunicorns/uds-common/v0.6.0/tasks/deploy.yaml
+  - setup: https://raw.githubusercontent.com/defenseunicorns/uds-common/v0.6.0/tasks/setup.yaml
+
+tasks:
+  - name: default
+    description: Setup k3d cluster, deploy Archivista
+    actions:
+      - task: create-av-test-bundle
+      - task: setup:k3d-test-cluster
+      - task: deploy:test-bundle
+
+  - name: create-av-package
+    description: Create the Archivista package
+    actions:
+      - task: create:package
+        with:
+          options: "--skip-sbom"
+
+  - name: create-av-test-bundle
+    description: Create a local UDS Archivista bundle
+    actions:
+      - task: create-av-package
+      - task: dependencies:create
+      - task: create:test-bundle
+
+  - name: create-av-latest-release-bundle
+    description: Create UDS Archivista bundle based on the latest release
+    actions:
+      - task: pull:latest-package-release
+        with:
+          spoof_release: "true"
+      - task: dependencies:create
+      - task: create:test-bundle
+
+  - name: dev
+    description: Create and deploy the bundle on an existing cluster (for iteration/dev speed)
+    actions:
+      - task: create-av-test-bundle
+      - task: deploy:test-bundle
+
+# CI will execute the following (via uds-common/.github/actions/test) so they need to be here with these names
+
+  - name: test-package
+    description: Test deploying the current branch to a new cluster
+    actions:
+      - task: create-av-test-bundle
+      - task: setup:k3d-test-cluster
+      - task: deploy:test-bundle
+      - task: setup:create-doug-user
+      - task: test:all

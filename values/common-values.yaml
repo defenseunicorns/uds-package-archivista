@@ -1,0 +1,15 @@
+ingress:
+  enabled: false
+
+deployment:
+  env:
+    - name: ARCHIVISTA_LISTEN_ON
+      value: tcp://0.0.0.0:8082
+
+  envFrom:
+    # Database Configuration
+    - secretRef:
+        name: archivista-postgres
+    # Object Store Configuration
+    - secretRef:
+        name: archivista-object-store

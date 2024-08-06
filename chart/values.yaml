@@ -1,0 +1,32 @@
+storage:
+  secure: true
+  accessKey: "###ZARF_VAR_ACCESS_KEY###"
+  secretKey: "###ZARF_VAR_SECRET_KEY###"
+  bucket: "archivista"
+  endpoint: "s3.amazonaws.com"
+
+  # Set to false to use external storage
+  internal: true
+  selector:
+    app: minio
+  namespace: dev-minio
+  port: 9000
+
+postgres:
+  username: "archivista.archivista"
+  # Note: Specifying password as anything other than "" will not use the existingSecret
+  password: ""
+  existingSecret:
+    name: "archivista.archivista.pg-cluster.credentials.postgresql.acid.zalan.do"
+    passwordKey: password
+    usernameKey: username
+  host: "pg-cluster.postgres.svc.cluster.local"
+  dbName: "archivista"
+  # Example: "?connect_timeout=10&sslmode=disable"
+  connectionOptions: ""
+  # Set to false to use external postgres
+  internal: true
+  selector:
+    cluster-name: pg-cluster
+  namespace: postgres
+  port: 5432

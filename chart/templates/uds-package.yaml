@@ -1,0 +1,63 @@
+apiVersion: uds.dev/v1alpha1
+kind: Package
+metadata:
+  name: archivista
+  namespace: {{ .Release.Namespace }}
+spec:
+  network:
+    expose:
+      - service: archivista
+        selector:
+          app.kubernetes.io/name: archivista
+        gateway: tenant
+        host: archivista
+        port: 8082
+    allow:
+      # Permit intra-namespace communication for job communications
+      - direction: Ingress
+        remoteGenerated: IntraNamespace
+
+      - direction: Egress
+        remoteGenerated: IntraNamespace
+
+      - direction: Egress
+        selector:
+          app.kubernetes.io/name: archivista
+        {{- if .Values.storage.internal }}
+        remoteNamespace: {{ .Values.storage.namespace | quote }}
+        remoteSelector:
+          {{ .Values.storage.selector | toYaml | nindent 10 }}
+        port: {{ .Values.storage.port }}
+        {{- else }}
+        remoteGenerated: Anywhere
+        {{- end }}
+        description: "Archivista Storage"
+
+      - direction: Egress
+        selector:
+          app.kubernetes.io/name: archivista
+        {{- if .Values.postgres.internal }}
+        remoteNamespace: {{ .Values.postgres.namespace | quote }}
+        remoteSelector:
+          {{ .Values.postgres.selector | toYaml | nindent 10 }}
+        port: {{ .Values.postgres.port }}
+        {{- else }}
+        remoteGenerated: Anywhere
+        {{- end }}
+        description: "Archivista Postgres"
+
+      # Custom rules for unanticipated scenarios
+      {{- range .Values.custom }}
+      - direction: {{ .direction }}
+        selector:
+          {{ .selector | toYaml | nindent 10 }}
+        {{- if not .remoteGenerated }}
+        remoteNamespace: {{ .remoteNamespace }}
+        remoteSelector:
+          {{ .remoteSelector | toYaml | nindent 10 }}
+        port: {{ .port }}
+        {{- else }}
+        remoteGenerated: {{ .remoteGenerated }}
+        {{- end }}
+        description: {{ .description }}
+      {{- end }}

@@ -1,0 +1,68 @@
+kind: UDSBundle
+metadata:
+  name: archivista-test
+  description: A UDS bundle for deploying Archivista and it's dependencies on a development cluster
+  # x-release-please-start-version
+  version: 0.5.3-uds.0
+  # x-release-please-end
+
+packages:
+  - name: dev-namespace
+    path: ../
+    ref: 0.1.0
+
+  - name: dev-minio
+    repository: ghcr.io/defenseunicorns/packages/uds/dev-minio
+    ref: 0.0.2
+
+  - name: postgres-operator
+    repository: ghcr.io/defenseunicorns/packages/uds/postgres-operator
+    ref: 1.12.2-uds.1-upstream
+    overrides:
+      postgres-operator:
+        uds-postgres-config:
+          values:
+            - path: postgresql
+              value:
+                enabled: true  # Set to false to not create the PostgreSQL resource
+                teamId: "uds"
+                volume:
+                  size: "10Gi"
+                numberOfInstances: 2
+                users:
+                  archivista.archivista: []  # database owner
+                databases:
+                  archivista: archivista.archivista
+                version: "14"
+                ingress:
+                  - remoteGenerated: Anywhere
+
+  - name: dev-secrets
+    path: ../
+    ref: 0.1.0
+    exports:
+      - name: ACCESS_KEY
+      - name: SECRET_KEY
+
+  - name: archivista
+    path: ../
+    # x-release-please-start-version
+    ref: 0.5.1-uds.0
+    # x-release-please-end
+    imports:
+      - name: ACCESS_KEY
+        package: dev-secrets
+      - name: SECRET_KEY
+        package: dev-secrets
+    overrides:
+      archivista:
+        uds-archivista-config:
+          values:
+            - path: "storage.secure"
+              value: "false"
+            - path: "storage.endpoint"
+              value: "minio.dev-minio.svc.cluster.local:9000"
+            - path: "storage.bucket"
+              value: "uds-archivista-dev"
+            - path: "postgres.connectionOptions"
+              value: "?search_path=archivista"
