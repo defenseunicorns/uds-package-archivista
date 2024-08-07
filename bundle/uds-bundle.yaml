@@ -47,7 +47,7 @@ packages:
   - name: archivista
     path: ../
     # x-release-please-start-version
-    ref: 0.5.1-uds.0
+    ref: 0.5.3-uds.0
     # x-release-please-end
     imports:
       - name: ACCESS_KEY
