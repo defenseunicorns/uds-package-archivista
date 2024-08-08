@@ -6,8 +6,13 @@ metadata:
 type: Opaque
 stringData:
   ARCHIVISTA_STORAGE_BACKEND: "BLOB"
-  ARCHIVISTA_BLOB_STORE_ENDPOINT: "{{ .Values.storage.endpoint }}"
-  ARCHIVISTA_BLOB_STORE_ACCESS_KEY_ID: "{{ .Values.storage.accessKey }}"
-  ARCHIVISTA_BLOB_STORE_SECRET_ACCESS_KEY_ID: "{{ .Values.storage.secretKey }}"
-  ARCHIVISTA_BLOB_STORE_USE_TLS: "{{ .Values.storage.secure | toString }}"
-  ARCHIVISTA_BLOB_STORE_BUCKET_NAME: "{{ .Values.storage.bucket }}"       
+  ARCHIVISTA_BLOB_STORE_ENDPOINT: {{ .Values.storage.endpoint | quote }}
+  ARCHIVISTA_BLOB_STORE_USE_TLS: {{ .Values.storage.secure | toString | quote }}
+  ARCHIVISTA_BLOB_STORE_BUCKET_NAME: {{ .Values.storage.bucket | quote }}
+  {{- if or (.Values.storage.accessKey) (.Values.storage.secretKey) }}
+  ARCHIVISTA_BLOB_STORE_CREDENTIAL_TYPE: "ACCESS_KEY"
+  ARCHIVISTA_BLOB_STORE_ACCESS_KEY_ID: {{ .Values.storage.accessKey | quote }}
+  ARCHIVISTA_BLOB_STORE_SECRET_ACCESS_KEY_ID: {{ .Values.storage.secretKey | quote }}
+  {{- else }}
+  ARCHIVISTA_BLOB_STORE_CREDENTIAL_TYPE: "IAM"
+  {{- end }}
