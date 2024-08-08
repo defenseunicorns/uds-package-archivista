@@ -1,6 +1,5 @@
 storage:
   secure: true
-  credentialType: "ACCESS_KEY"
   accessKey: "###ZARF_VAR_ACCESS_KEY###"
   secretKey: "###ZARF_VAR_SECRET_KEY###"
   bucket: "archivista"
