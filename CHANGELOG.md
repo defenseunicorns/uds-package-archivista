@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3-uds.3](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.2...v0.5.3-uds.3) (2024-08-08)
+
+
+### Miscellaneous
+
+* add upgrade testing ([#17](https://github.com/defenseunicorns/uds-package-archivista/issues/17)) ([fa1c7f3](https://github.com/defenseunicorns/uds-package-archivista/commit/fa1c7f3f6af38cf0d2871caa23d63e2e79c1dd27))
+
 ## [0.5.3-uds.2](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.1...v0.5.3-uds.2) (2024-08-08)
 
 
