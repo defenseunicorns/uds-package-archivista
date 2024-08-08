@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         flavor: [upstream]
-        type: [install]
+        type: [install, upgrade]
     steps:
       - name: Shim for ${{ matrix.type }} ${{ matrix.flavor }}
         run: |
