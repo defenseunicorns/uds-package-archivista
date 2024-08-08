@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3-uds.2](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.1...v0.5.3-uds.2) (2024-08-08)
+
+
+### Features
+
+* set blob store credential type ([#15](https://github.com/defenseunicorns/uds-package-archivista/issues/15)) ([c609bc1](https://github.com/defenseunicorns/uds-package-archivista/commit/c609bc113017617bcb4267eab9cecee1b1f43529))
+
 ## [0.5.3-uds.1](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.0...v0.5.3-uds.1) (2024-08-07)
 
 
