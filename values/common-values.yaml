@@ -1,6 +1,10 @@
 ingress:
   enabled: false
 
+serviceAccount:
+  create: true
+  annotations: {}
+
 deployment:
   env:
     - name: ARCHIVISTA_LISTEN_ON
