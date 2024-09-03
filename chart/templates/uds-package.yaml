@@ -33,6 +33,14 @@ spec:
         {{- end }}
         description: "Archivista Storage"
 
+      {{- if eq .Values.storage.internal false }}
+      - direction: Egress
+        selector:
+          app.kubernetes.io/name: archivista
+        remoteGenerated: CloudMetadata
+        description: "Archivista Storage Cloud Metadata"
+      {{- end }}
+
       - direction: Egress
         selector:
           app.kubernetes.io/name: archivista
