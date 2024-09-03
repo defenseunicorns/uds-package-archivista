@@ -1,7 +1,7 @@
 storage:
   secure: true
-  accessKey: "###ZARF_VAR_ACCESS_KEY###"
-  secretKey: "###ZARF_VAR_SECRET_KEY###"
+  accessKey: ""
+  secretKey: ""
   bucket: "archivista"
   endpoint: "s3.amazonaws.com"
 
