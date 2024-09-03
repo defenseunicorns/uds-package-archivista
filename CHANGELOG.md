@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.5.3-uds.3](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.2...v0.5.3-uds.3) (2024-09-03)
+
+
+### Bug Fixes
+
+* move access key and secret to config-values ([#22](https://github.com/defenseunicorns/uds-package-archivista/issues/22)) ([0a49d3b](https://github.com/defenseunicorns/uds-package-archivista/commit/0a49d3bd5e1928385e5c6ab24d62937e7932ba65))
+
+
+### Miscellaneous
+
+* add upgrade testing ([#17](https://github.com/defenseunicorns/uds-package-archivista/issues/17)) ([fa1c7f3](https://github.com/defenseunicorns/uds-package-archivista/commit/fa1c7f3f6af38cf0d2871caa23d63e2e79c1dd27))
+* **deps:** update support-deps to v3.26.1 ([#19](https://github.com/defenseunicorns/uds-package-archivista/issues/19)) ([026858d](https://github.com/defenseunicorns/uds-package-archivista/commit/026858d604dd695329c2ad6db006f9a9d7280810))
+
 ## [0.5.3-uds.2](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.1...v0.5.3-uds.2) (2024-08-08)
 
 
