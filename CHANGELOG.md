@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3-uds.4](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.3...v0.5.3-uds.4) (2024-09-03)
+
+
+### Bug Fixes
+
+* add service account and netpol for cloud metadata egress ([#23](https://github.com/defenseunicorns/uds-package-archivista/issues/23)) ([5193bd0](https://github.com/defenseunicorns/uds-package-archivista/commit/5193bd001382ecd9ea1f04bb7883c8d00ff7701a))
+
 ## [0.5.3-uds.3](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.2...v0.5.3-uds.3) (2024-09-03)
 
 
