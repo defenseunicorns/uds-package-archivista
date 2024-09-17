@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.4-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.4...v0.5.4-uds.0) (2024-09-17)
+
+
+### Miscellaneous
+
+* **deps:** update archivista package dependencies ([#21](https://github.com/defenseunicorns/uds-package-archivista/issues/21)) ([ace178b](https://github.com/defenseunicorns/uds-package-archivista/commit/ace178b14b392e2d2c51d7762aa0cbcac9e438c9))
+
 ## [0.5.3-uds.4](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.3...v0.5.3-uds.4) (2024-09-03)
 
 
