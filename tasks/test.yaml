@@ -1,3 +1,6 @@
+# Copyright 2024 Defense Unicorns
+# SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-Defense-Unicorns-Commercial
+
 tasks:
   - name: all
     actions:
@@ -21,7 +24,7 @@ tasks:
           downloaded_file=downloaded_attestation.json
 
           #upload an existing attestation to archivista
-          response=$(curl --fail-with-body -o response.json -X POST https://archivista.uds.dev/upload -d @$attestation_file)
+          curl --fail-with-body -o response.json -X POST https://archivista.uds.dev/upload -d @$attestation_file
           curl_rc=$?
           response_body=$(cat response.json)
 
@@ -31,7 +34,7 @@ tasks:
               gitoid=$(echo "$response_body" | jq -r '.gitoid')
 
               # use the gitoid to download the attestation from archivista
-              curl -o $downloaded_file https://archivista.uds.dev/download/$gitoid
+              curl -o $downloaded_file "https://archivista.uds.dev/download/$gitoid"
 
               # compare the downloaded file to the original file to make sure they match
               if cmp -s $attestation_file $downloaded_file; then
