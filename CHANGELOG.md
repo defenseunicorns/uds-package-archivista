@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.4-uds.1](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.4-uds.0...v0.5.4-uds.1) (2024-10-16)
+
+
+### Miscellaneous
+
+* add made for uds badge ([4ae45cb](https://github.com/defenseunicorns/uds-package-archivista/commit/4ae45cbc0dcba7a1bc009a9d00acf37ea46a1636))
+* add made for uds badge ([#10](https://github.com/defenseunicorns/uds-package-archivista/issues/10)) ([41fb674](https://github.com/defenseunicorns/uds-package-archivista/commit/41fb67477a2e0ebdb30fe3978b547bad80afa65c))
+* update to uds-common v1 ([57db102](https://github.com/defenseunicorns/uds-package-archivista/commit/57db10295dcbf398dc73e8a812e3f52e56f622b5))
+
 ## [0.5.4-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.4...v0.5.4-uds.0) (2024-09-17)
 
 
