@@ -31,4 +31,4 @@ components:
         valuesFiles:
           - values/upstream-values.yaml
     images:
-      - ghcr.io/in-toto/archivista:0.5.4
+      - ghcr.io/in-toto/archivista:0.6.0

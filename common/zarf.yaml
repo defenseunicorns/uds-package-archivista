@@ -21,7 +21,7 @@ components:
         namespace: archivista
         url: https://github.com/in-toto/archivista.git
         gitPath: chart
-        version: v0.5.4
+        version: v0.6.0
         valuesFiles:
           - ../values/common-values.yaml
     actions:
