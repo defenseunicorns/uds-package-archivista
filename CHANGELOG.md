@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.0-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.4-uds.0...v0.6.0-uds.0) (2024-10-24)
+
+
+### Miscellaneous
+
+* add made for uds badge ([4ae45cb](https://github.com/defenseunicorns/uds-package-archivista/commit/4ae45cbc0dcba7a1bc009a9d00acf37ea46a1636))
+* add made for uds badge ([#10](https://github.com/defenseunicorns/uds-package-archivista/issues/10)) ([41fb674](https://github.com/defenseunicorns/uds-package-archivista/commit/41fb67477a2e0ebdb30fe3978b547bad80afa65c))
+* bronze badge, streamline README and GH permissions ([131c304](https://github.com/defenseunicorns/uds-package-archivista/commit/131c304b067a4bfaa0cf91bc9524046f498299d4))
+* **deps:** update archivista package dependencies ([906d507](https://github.com/defenseunicorns/uds-package-archivista/commit/906d507f06516270ff9f8c2aac732b99fbc791ff))
+* **deps:** update support-deps to v1.1.1 ([9274765](https://github.com/defenseunicorns/uds-package-archivista/commit/9274765dde343e3cc39c1943d97c27c0109cadf1))
+* **deps:** update support-deps to v1.1.2 ([7bea005](https://github.com/defenseunicorns/uds-package-archivista/commit/7bea005635abfccb9b7cc2f84cce15bbaaf55746))
+* update to uds-common v1 ([57db102](https://github.com/defenseunicorns/uds-package-archivista/commit/57db10295dcbf398dc73e8a812e3f52e56f622b5))
+
 ## [0.5.4-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.3-uds.4...v0.5.4-uds.0) (2024-09-17)
 
 
