@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.5.4-uds.1](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.4-uds.0...v0.5.4-uds.1) (2024-10-24)
+## [0.6.0-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.4-uds.0...v0.6.0-uds.0) (2024-10-24)
 
 
 ### Miscellaneous
