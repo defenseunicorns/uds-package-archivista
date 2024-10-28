@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.7.0-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.6.0-uds.0...v0.7.0-uds.0) (2024-10-28)
+
+
+### Features
+
+* add unicorn flavor ([#38](https://github.com/defenseunicorns/uds-package-archivista/issues/38)) ([eb513f3](https://github.com/defenseunicorns/uds-package-archivista/commit/eb513f3931c7be374d5c275ea464a6484616eb51))
+
+
+### Miscellaneous
+
+* **deps:** update archivista support dependencies ([#32](https://github.com/defenseunicorns/uds-package-archivista/issues/32)) ([32afe68](https://github.com/defenseunicorns/uds-package-archivista/commit/32afe6882e3be0efdf7a0370bb7f7a6e34fd628b))
+* **deps:** update package-deps to v0.7.0 ([#35](https://github.com/defenseunicorns/uds-package-archivista/issues/35)) ([6d9498b](https://github.com/defenseunicorns/uds-package-archivista/commit/6d9498b9cac5ee87e397c75fb4b0f0d7a01883ff))
+* **deps:** update package-deps to v0.7.0 ([#40](https://github.com/defenseunicorns/uds-package-archivista/issues/40)) ([4c78cd1](https://github.com/defenseunicorns/uds-package-archivista/commit/4c78cd1a706f9d32f8fd54745ac6ab7f3f9e2340))
+* **deps:** update support-deps to v1.2.1 ([#39](https://github.com/defenseunicorns/uds-package-archivista/issues/39)) ([7044f1c](https://github.com/defenseunicorns/uds-package-archivista/commit/7044f1cb0f42e35ab30c9dcb8d09a265cd960274))
+
 ## [0.6.0-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.5.4-uds.0...v0.6.0-uds.0) (2024-10-24)
 
 
