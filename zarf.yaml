@@ -31,7 +31,7 @@ components:
         valuesFiles:
           - values/upstream-values.yaml
     images:
-      - ghcr.io/in-toto/archivista:0.6.0
+      - ghcr.io/in-toto/archivista:0.7.0
 
   - name: archivista
     required: true
@@ -45,4 +45,4 @@ components:
         valuesFiles:
           - values/unicorn-values.yaml
     images:
-      - ghcr.io/in-toto/archivista:0.6.0
+      - ghcr.io/in-toto/archivista:0.7.0

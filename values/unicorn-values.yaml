@@ -4,4 +4,4 @@
 # unicorn flavor is using upstream images until chainguard images exist
 image:
   repository: ghcr.io/in-toto/archivista
-  tag: "0.6.0"
+  tag: "0.7.0"
