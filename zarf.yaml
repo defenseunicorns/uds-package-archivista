@@ -32,3 +32,17 @@ components:
           - values/upstream-values.yaml
     images:
       - ghcr.io/in-toto/archivista:0.6.0
+
+  - name: archivista
+    required: true
+    description: "Deploy Archivista"
+    import:
+      path: common
+    only:
+      flavor: unicorn
+    charts:
+      - name: archivista
+        valuesFiles:
+          - values/unicorn-values.yaml
+    images:
+      - ghcr.io/in-toto/archivista:0.6.0

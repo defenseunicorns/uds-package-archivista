@@ -1,0 +1,7 @@
+# Copyright 2024 Defense Unicorns
+# SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-Defense-Unicorns-Commercial
+
+# unicorn flavor is using upstream images until chainguard images exist
+image:
+  repository: ghcr.io/in-toto/archivista
+  tag: "0.6.0"
