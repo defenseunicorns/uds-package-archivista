@@ -9,6 +9,7 @@
 > `uds-package-archivista` is only a Bronze package and currently only provides a public Archivista instance. If you would like to improve the package we welcome PRs! (see [Contributing](#contributing) below)
 
 This package is designed for use as part of a [UDS Software Factory](https://github.com/defenseunicorns/uds-software-factory) bundle deployed on [UDS Core](https://github.com/defenseunicorns/uds-core).
+
 > Archivista is an open-source document management system that can be deployed on various platforms, offering features like easy installation, web-based maintenance, and scanner integration. It is a versatile solution for managing and storing documents efficiently.
 
 ## Prerequisites
