@@ -7,12 +7,17 @@ storage:
   secretKey: ""
   bucket: "archivista"
   endpoint: "s3.amazonaws.com"
-
+  secretRef:
+    enabled: true  # Set to true to use secret reference
+    secretNamespace: "archivista"
+    secretName: "archivista-minio"
+    secretIDKey: "access_key"
+    secretPasswordKey: "secret_key"
   # Set to false to use external storage
   internal: true
   selector:
     app: minio
-  namespace: dev-minio
+  namespace: minio
   port: 9000
 
 postgres:

@@ -8,14 +8,30 @@ metadata:
   namespace: {{ .Release.Namespace }}
 type: Opaque
 stringData:
+  {{- $awsAccessKey := "" }}
+  {{- $awsSecretKey := "" }}
+
+  {{- $secret := lookup "v1" "Secret" .Values.storage.secretRef.secretNamespace .Values.storage.secretRef.secretName }}
+  {{- if and $secret (index $secret.data .Values.storage.secretRef.secretIDKey) }}
+    {{- $awsAccessKey = (index $secret.data .Values.storage.secretRef.secretIDKey | b64dec) }}
+  {{- else }}
+    {{- $awsAccessKey = .Values.storage.accessKey | quote }}
+  {{- end }}
+  
+  {{- if and $secret (index $secret.data .Values.storage.secretRef.secretPasswordKey) }}
+    {{- $awsSecretKey = (index $secret.data .Values.storage.secretRef.secretPasswordKey | b64dec) }}
+  {{- else }}
+    {{- $awsSecretKey = .Values.storage.secretKey | quote }}
+  {{- end }}
+
   ARCHIVISTA_STORAGE_BACKEND: "BLOB"
   ARCHIVISTA_BLOB_STORE_ENDPOINT: {{ .Values.storage.endpoint | quote }}
   ARCHIVISTA_BLOB_STORE_USE_TLS: {{ .Values.storage.secure | toString | quote }}
   ARCHIVISTA_BLOB_STORE_BUCKET_NAME: {{ .Values.storage.bucket | quote }}
-  {{- if or (.Values.storage.accessKey) (.Values.storage.secretKey) }}
+  {{- if or (.Values.storage.accessKey) (.Values.storage.secretKey) (.Values.storage.secretRef.enabled) }}
   ARCHIVISTA_BLOB_STORE_CREDENTIAL_TYPE: "ACCESS_KEY"
-  ARCHIVISTA_BLOB_STORE_ACCESS_KEY_ID: {{ .Values.storage.accessKey | quote }}
-  ARCHIVISTA_BLOB_STORE_SECRET_ACCESS_KEY_ID: {{ .Values.storage.secretKey | quote }}
+  ARCHIVISTA_BLOB_STORE_ACCESS_KEY_ID: {{ $awsAccessKey }}
+  ARCHIVISTA_BLOB_STORE_SECRET_ACCESS_KEY_ID: {{ $awsSecretKey }}
   {{- else }}
   ARCHIVISTA_BLOB_STORE_CREDENTIAL_TYPE: "IAM"
   {{- end }}
