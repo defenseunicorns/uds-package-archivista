@@ -65,7 +65,7 @@ packages:
             - path: "storage.secure"
               value: "false"
             - path: "storage.endpoint"
-              value: "http://uds-minio-hl.minio.svc.cluster.local:9000"
+              value: "uds-minio-hl.minio.svc.cluster.local:9000"
             - path: "storage.bucket"
               value: "uds-archivista-dev"
             - path: "postgres.connectionOptions"
