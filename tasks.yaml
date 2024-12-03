@@ -33,7 +33,6 @@ tasks:
   - name: create-deploy-test-bundle
     description: Test and validate cluster is deployed with Valkey
     actions:
-      - task: dependencies:create
       - task: create:test-bundle
       - task: deploy:test-bundle
       - task: setup:create-doug-user
@@ -61,9 +60,11 @@ tasks:
     actions:
       - task: upgrade:create-latest-tag-bundle
         with:
-          dep_commands: ./uds run dependencies:create
+          dep_commands: ./uds run dependencies:create && cp bundle/uds-config.yaml ../bundle/uds-config-previous.yaml
       - task: setup:k3d-test-cluster
       - task: deploy:test-bundle
+        with:
+          config: bundle/uds-config-previous.yaml
       - task: setup:create-doug-user
       - task: compliance:validate
       - task: create-dev-package

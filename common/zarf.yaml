@@ -35,6 +35,10 @@ components:
                 name: archivista
                 namespace: archivista
                 condition: "'{.status.phase}'=Ready"
+          - cmd: ./zarf tools kubectl -n archivista rollout restart deployment
+            description: Restart Archivista Deployment so pods cycle on upgrades
+          - cmd: ./zarf tools kubectl -n archivista rollout status deploy
+            description: Wait for Rollout to complete before continuing
           - description: Archivista to be Healthy
             maxTotalSeconds: 180
             wait:
