@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.7.0-uds.1](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.7.0-uds.0...v0.7.0-uds.1) (2024-12-04)
+
+
+### Features
+
+* add secret lookup logic, replace dev-minio with operator ([#46](https://github.com/defenseunicorns/uds-package-archivista/issues/46)) ([ad2ae11](https://github.com/defenseunicorns/uds-package-archivista/commit/ad2ae111f4748dc067916eb6050fc136c33399f3))
+
+
+### Miscellaneous
+
+* **deps:** update archivista package dependencies ([#50](https://github.com/defenseunicorns/uds-package-archivista/issues/50)) ([a457efb](https://github.com/defenseunicorns/uds-package-archivista/commit/a457efb5d5c46816d13ad7abc6c2c5d618c83769))
+* **deps:** update package-deps to v1.13.0-uds.4-upstream ([#41](https://github.com/defenseunicorns/uds-package-archivista/issues/41)) ([7138374](https://github.com/defenseunicorns/uds-package-archivista/commit/713837444f6c2c90129ab080636b47b590b3a8ab))
+* **deps:** update package-deps to v6.0.4-uds.1-upstream ([#49](https://github.com/defenseunicorns/uds-package-archivista/issues/49)) ([8532f5d](https://github.com/defenseunicorns/uds-package-archivista/commit/8532f5d578c4aad17488f33a9ce81bc15fe8106b))
+* **deps:** update support-deps to v1.2.2 ([#42](https://github.com/defenseunicorns/uds-package-archivista/issues/42)) ([e48693a](https://github.com/defenseunicorns/uds-package-archivista/commit/e48693afa682e6ddd9323a95517720ab5cd93651))
+* **deps:** update support-deps to v1.3.0 ([#47](https://github.com/defenseunicorns/uds-package-archivista/issues/47)) ([292716a](https://github.com/defenseunicorns/uds-package-archivista/commit/292716a1caad979c57d894c7736cd1b6e4495cb4))
+* **deps:** update support-deps to v1.4.0 ([#48](https://github.com/defenseunicorns/uds-package-archivista/issues/48)) ([eeadb31](https://github.com/defenseunicorns/uds-package-archivista/commit/eeadb3194b1ac0df4205312bb6cac7784da0a420))
+* update README.md ([#44](https://github.com/defenseunicorns/uds-package-archivista/issues/44)) ([42d5b17](https://github.com/defenseunicorns/uds-package-archivista/commit/42d5b1735ef0fef669dcf479612edcb52d9d8f84))
+
 ## [0.7.0-uds.0](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.6.0-uds.0...v0.7.0-uds.0) (2024-10-28)
 
 
