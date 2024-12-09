@@ -58,12 +58,8 @@ tasks:
     description: Test an upgrade from the latest released package to the current branch
     actions:
       - task: upgrade:create-latest-tag-bundle
-        with:
-          dep_commands: cp bundle/uds-config.yaml ../bundle/uds-config-previous.yaml
       - task: setup:k3d-test-cluster
       - task: deploy:test-bundle
-        with:
-          config: bundle/uds-config-previous.yaml
       - task: setup:create-doug-user
       - task: compliance:validate
       - task: create-dev-package
