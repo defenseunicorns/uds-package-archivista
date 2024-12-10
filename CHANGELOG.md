@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0-uds.2](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.7.0-uds.1...v0.7.0-uds.2) (2024-12-10)
+
+
+### Miscellaneous
+
+* update application description in readme ([#54](https://github.com/defenseunicorns/uds-package-archivista/issues/54)) ([16a44cc](https://github.com/defenseunicorns/uds-package-archivista/commit/16a44cc021a823a001df8143ef85c23c88f8cb5e))
+
 ## [0.7.0-uds.1](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.7.0-uds.0...v0.7.0-uds.1) (2024-12-04)
 
 
