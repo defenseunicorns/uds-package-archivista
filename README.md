@@ -10,7 +10,7 @@
 
 This package is designed for use as part of a [UDS Software Factory](https://github.com/defenseunicorns/uds-software-factory) bundle deployed on [UDS Core](https://github.com/defenseunicorns/uds-core).
 
-> Archivista is an open-source document management system that can be deployed on various platforms, offering features like easy installation, web-based maintenance, and scanner integration. It is a versatile solution for managing and storing documents efficiently.
+> Archivista is a graph and storage service for in-toto attestations. Archivista enables the discovery and retrieval of attestations for software artifacts. Archivista enables you to store and retrieve in-toto attestations, query for relationships between attestations, and validate Witness policy without the need to manually list expected attestations.
 
 ## Prerequisites
 
