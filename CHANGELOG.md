@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.7.0-uds.2](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.7.0-uds.1...v0.7.0-uds.2) (2024-12-11)
+
+
+### Miscellaneous
+
+* add values schema to config chart ([#56](https://github.com/defenseunicorns/uds-package-archivista/issues/56)) ([0dd0cf8](https://github.com/defenseunicorns/uds-package-archivista/commit/0dd0cf81954b43db6a7b5ec95f8546285d13d736))
+* update application description in readme ([#54](https://github.com/defenseunicorns/uds-package-archivista/issues/54)) ([16a44cc](https://github.com/defenseunicorns/uds-package-archivista/commit/16a44cc021a823a001df8143ef85c23c88f8cb5e))
+* update custom network properties key ([#53](https://github.com/defenseunicorns/uds-package-archivista/issues/53)) ([b266852](https://github.com/defenseunicorns/uds-package-archivista/commit/b26685274ab8c1832529f6d255567ecc08655850))
+
 ## [0.7.0-uds.1](https://github.com/defenseunicorns/uds-package-archivista/compare/v0.7.0-uds.0...v0.7.0-uds.1) (2024-12-04)
 
 
