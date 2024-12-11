@@ -1,0 +1,170 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "storage": {
+        "type": "object",
+        "properties": {
+          "secure": {
+            "type": "boolean"
+          },
+          "accessKey": {
+            "type": "string"
+          },
+          "secretKey": {
+            "type": "string"
+          },
+          "bucket": {
+            "type": "string"
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "internal": {
+            "type": "boolean"
+          },
+          "selector": {
+            "type": "object",
+            "properties": {
+              "app": {
+                "type": "string"
+              }
+            }
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "port": {
+            "type": "number"
+          }
+        }
+      },
+      "postgres": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "existingSecret": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "passwordKey": {
+                "type": "string"
+              },
+              "usernameKey": {
+                "type": "string"
+              }
+            }
+          },
+          "host": {
+            "type": "string"
+          },
+          "dbName": {
+            "type": "string"
+          },
+          "connectionOptions": {
+            "type": "string"
+          },
+          "internal": {
+            "type": "boolean"
+          },
+          "selector": {
+            "type": "object",
+            "properties": {
+              "cluster-name": {
+                "type": "string"
+              }
+            }
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "port": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalNetworkAllow": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "direction": {
+              "type": "string",
+              "enum": [
+                "Egress",
+                "Ingress"
+              ]
+            },
+            "selector": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "port": {
+              "type": "number"
+            },
+            "description": {
+              "type": "string"
+            },
+            "remoteNamespace": {
+              "type": "string"
+            },
+            "remoteSelector": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "remoteGenerated": {
+              "type": "string",
+              "enum": [
+                "Anywhere",
+                "CloudMetadata",
+                "IntraNamespace",
+                "KubeAPI"
+              ]
+            }
+          },
+          "required": [
+            "direction",
+            "selector",
+            "port"
+          ],
+          "oneOf": [
+            {
+              "required": [
+                "remoteNamespace",
+                "remoteSelector"
+              ],
+              "properties": {
+                "remoteGenerated": {
+                  "not": {}
+                }
+              }
+            },
+            {
+              "required": [
+                "remoteGenerated"
+              ],
+              "properties": {
+                "remoteNamespace": {
+                  "not": {}
+                },
+                "remoteSelector": {
+                  "not": {}
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }

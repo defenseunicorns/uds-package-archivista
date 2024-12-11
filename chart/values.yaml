@@ -1,5 +1,6 @@
 # Copyright 2024 Defense Unicorns
 # SPDX-License-Identifier: AGPL-3.0-or-later OR LicenseRef-Defense-Unicorns-Commercial
+# yaml-language-server: $schema=./values.schema.json
 
 storage:
   secure: true
@@ -38,3 +39,5 @@ postgres:
     cluster-name: pg-cluster
   namespace: postgres
   port: 5432
+
+additionalNetworkAllow: []
