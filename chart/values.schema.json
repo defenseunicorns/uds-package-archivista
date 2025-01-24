@@ -46,7 +46,7 @@
         },
         "selector": {
           "type": "object",
-          "additionalProperties": true,
+          "additionalProperties": false,
           "properties": {
             "v1.min.io/tenant": {
               "type": "string"
