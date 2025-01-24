@@ -46,13 +46,12 @@
         },
         "selector": {
           "type": "object",
-          "patternProperties": {
-            ".*": {
-              "type": "string",
-              "description": "Key-value pair for selecting storage"
+          "additionalProperties": true,
+          "properties": {
+            "v1.min.io/tenant": {
+              "type": "string"
             }
-          },
-          "additionalProperties": true
+          }
         },
         "namespace": {
           "type": "string"
