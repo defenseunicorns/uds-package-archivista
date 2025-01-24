@@ -46,12 +46,13 @@
         },
         "selector": {
           "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "app": {
-              "type": "string"
+          "patternProperties": {
+            ".*": {
+              "type": "string",
+              "description": "Key-value pair for selecting storage"
             }
-          }
+          },
+          "additionalProperties": true
         },
         "namespace": {
           "type": "string"
