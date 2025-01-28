@@ -19,9 +19,9 @@ components:
           - ../values/config-values.yaml
       - name: archivista
         namespace: archivista
-        url: https://github.com/in-toto/archivista.git
-        gitPath: chart
-        version: v0.8.0
+        url: https://github.com/in-toto/helm-charts.git
+        gitPath: charts/archivista
+        version: archivista-0.7.0
         valuesFiles:
           - ../values/common-values.yaml
     actions:
