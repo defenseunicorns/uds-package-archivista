@@ -4,7 +4,7 @@
 flavors:
   - name: upstream
     # renovate-uds: datasource=docker depName=ghcr.io/in-toto/archivista
-    version: 0.9.2-uds.0
+    version: 0.9.3-uds.0
   - name: unicorn
     # renovate-uds: datasource=docker depName=ghcr.io/in-toto/archivista
-    version: 0.9.2-uds.0
+    version: 0.9.3-uds.0
